@@ -19,6 +19,10 @@ app.get('/products', (req, res) => {
   ])
 })
 
+app.get('/products/:id', (req, res) => {
+  res.send(`Get request for product with id ${req.params.id}`);
+})
+
 app.listen(port, ()=> {
   console.log(`Demo app is up and listening to port: ${port}`);
 })
